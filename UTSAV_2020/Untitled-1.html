@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Image Gallery Carousel Slider Demo</title>
+        <link rel="stylesheet" href="css/lightslider.min.css" />                  
+        <script src="http://code.jquery.com/jquery-1.12.2.min.js"></script>
+        <script src="js/lightslider.min.js"></script>
+    </head>
+    <body>
+        <div id="gallery" style="max-width: 500px;">
+            <ul id="lightSlider">
+                <li><img src="images/breads_thumbnail.jpg" alt="Breads" data-src="images/breads.jpg"/></li>
+                <li><img src="images/oranges_thumbnail.jpg" alt="Oranges" data-src="images/oranges.jpg"/></li>
+                <li><img src="images/butternut_squash_thumbnail.jpg" alt="Butternut Squash" data-src="images/butternut_squash.jpg"/></li>
+                <li><img src="images/carrots_thumbnail.jpg" alt="Carrots" data-src="images/carrots.jpg"/></li>
+                <li><img src="images/chickens_at_market_thumbnail.jpg" alt="Chickens at Market" data-src="images/chickens_at_market.jpg" /></li>
+                <li><img src="images/edible_fungi_thumbnail.jpg" alt="Edible Fungi" data-src="images/edible_fungi.jpg"/></li>
+                <li><img src="images/fish_at_market_thumbnail.jpg" alt="Fish at Market" data-src="images/fish_at_market.jpg"/></li>
+                <li><img src="images/flaming_cocktails_thumbnail.jpg" alt="Flaming Cocktails" data-src="images/flaming_cocktails.jpg"/></li>
+                <li><img src="images/orange_juice_thumbnail.jpg" alt="Orange Juice" data-src="images/orange_juice.jpg" /></li>
+                <li><img src="images/peaches_thumbnail.jpg" alt="Peaches" data-src="images/peaches.jpg"/></li>
+                <li><img src="images/peppers_thumbnail.jpg" alt="Peppers" data-src="images/peppers.jpg"/></li>
+                <li><img src="images/pomegranate_thumbnail.jpg" alt="Pomegranate" data-src="images/pomegranate.jpg"/></li>
+                <li><img src="images/pumpkins_thumbnail.jpg" alt="Pumpkins" data-src="images/pumpkins.jpg"/></li>
+                <li><img src="images/wine_cheese_bread_thumbnail.jpg" alt="Wine, Cheese and Bread" data-src="images/wine_cheese_bread.jpg"/></li>
+                <li><img src="images/soft_cheese_thumbnail.jpg" alt="Soft Cheese" data-src="images/soft_cheese.jpg"/></li>
+            </ul>
+            <img style="max-width: 100%; height: auto !important;" id="picture" src="images/breads.jpg" alt="Breads"/>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#lightSlider").lightSlider({autoWidth:true, enableDrag:false});
+                $("#lightSlider img").click( function() {
+                        $('#picture').attr('src', $(this).data('src'));
+                        $('#picture').attr('alt', $(this).attr('alt'));
+                });
+            });
+        </script>
+    </body>
+</html>
